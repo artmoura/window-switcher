@@ -406,7 +406,7 @@ impl App {
             self.config.switch_apps_ignore_minimal,
             self.config.switch_apps_only_current_desktop(),
             self.is_admin,
-            false,
+            self.config.switch_windows_merge_browser_profiles,
         )?;
         let mut apps = vec![];
         for (module_path, hwnds) in windows.iter() {
